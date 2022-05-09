@@ -36,7 +36,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-
         android:singleLine="true"
         app:layout_constraintBottom_toBottomOf="@id/avatar"
         app:layout_constraintEnd_toEndOf="@id/authorName"
@@ -49,16 +48,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00000000"
-
         android:src="@drawable/ic_options_24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/headerBarrier"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="avatar, date, options" />
 
@@ -71,8 +69,8 @@
         android:layout_marginBottom="@dimen/common_spacing"
         android:ellipsize="end"
         app:layout_constraintTop_toBottomOf="@id/headerBarrier"
-        tools:text="This should be in English :) Привет, это новая Нетология! Когда-то Нетология начиналась с интенсивов по онлайн-маркетингу. Затем появились курсы по дизайну, разработке, аналитике и управлению. Мы растём сами и помогаем расти студентам: от новичков до уверенных профессионалов. Но самое важное остаётся с нами: мы верим, что в каждом уже есть сила, которая заставляет хотеть больше, целиться выше, бежать быстрее. Наша миссия — помочь встать на путь роста и начать цепочку перемен → http://netolo.gy/fyb </string>
-"/>
+        tools:text="@string/text"
+/>
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/finishBarrier"
@@ -92,7 +90,8 @@
         android:src="@drawable/ic_likes_24dp"
         app:layout_constraintEnd_toStartOf="@id/countLikes"
         app:layout_constraintStart_toStartOf="@id/text"
-        app:layout_constraintTop_toBottomOf="@id/finishBarrier" />
+        app:layout_constraintTop_toBottomOf="@id/finishBarrier"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/countLikes"
@@ -116,7 +115,8 @@
         android:background="#00000000"
         android:src="@drawable/ic_share_24dp"
         app:layout_constraintEnd_toStartOf="@id/countShares"
-        app:layout_constraintTop_toBottomOf="@id/text" />
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/countShares"
@@ -139,7 +139,8 @@
         android:background="#00000000"
         android:src="@drawable/ic_views_24dp"
         app:layout_constraintEnd_toStartOf="@id/countViews"
-        app:layout_constraintTop_toBottomOf="@id/text" />
+        app:layout_constraintTop_toBottomOf="@id/text"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/countViews"
